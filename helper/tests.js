@@ -6,6 +6,7 @@ var path = require('path');
 module.exports = {
   watch: function() {
     // Documentation: https://karma-runner.github.io/0.13/dev/public-api.html
+    console.log("watch");
     var karmaConfig = {
       configFile: path.join(__dirname, '../karma.conf.js'),
       singleRun: false,
@@ -15,9 +16,11 @@ module.exports = {
       reporters: ['mocha']
     };
 
+console.log(karmaConfig);
     new Server(karmaConfig, karmaCompleted).start();
 
     function karmaCompleted(exitCode) {
+        console.log(exitCode);
       process.exit(exitCode);
     }
   }

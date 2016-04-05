@@ -1,2 +1,64 @@
-!function(o){function t(r){if(n[r])return n[r].exports;var e=n[r]={exports:{},id:r,loaded:!1};return o[r].call(e.exports,e,e.exports,t),e.loaded=!0,e.exports}var n={};return t.m=o,t.c=n,t.p="dist/scripts",t(0)}([function(o,t){"use strict";var n=function(){function o(){}return o.prototype.add=function(o,t){return o+t},o}();window.onload=function(){console.log("onl")},t.__esModule=!0,t["default"]=n}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "dist/scripts";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var Hoge = function () {
+	    function Hoge() {}
+	    Hoge.prototype.add = function (a, b) {
+	        return a + b;
+	    };
+	    return Hoge;
+	}();
+	window.onload = function () {
+	    console.log("onl");
+	};
+	exports.__esModule = true;
+	exports["default"] = Hoge;
+
+/***/ }
+/******/ ]);
 //# sourceMappingURL=main.js.map
