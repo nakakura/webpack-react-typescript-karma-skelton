@@ -8,5 +8,9 @@
     "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#bcd5761826eb567876c197ccc6a87c4d05731054",
     "react-addons-test-utils": "github:DefinitelyTyped/DefinitelyTyped/react/react-addons-test-utils.d.ts#bcd5761826eb567876c197ccc6a87c4d05731054",
     "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#bcd5761826eb567876c197ccc6a87c4d05731054"
+  },
+  "dependencies": {
+    "chai": "registry:npm/chai#3.5.0+20160402210230",
+    "sinon": "registry:npm/sinon#1.16.0+20160309002336"
   }
 }

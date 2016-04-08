@@ -9,6 +9,9 @@ var tests = require('./helper/tests');
 
 module.exports = {
     cache: true,
+    noParse: [
+        /sinon/
+    ],
     entry: {
         main: './src/main.ts'
     },
@@ -45,10 +48,14 @@ module.exports = {
         // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
     },
-    devServer:{
-        port: 8081
+    devServer: {
+        quiet: true,
+        https: true,
+        inline: true,
+        port: 8080,
+        contentBase: "./"
     }
 };
 
-if(process.env.NODE_ENV === "develop") tests.watch();
+if (process.env.NODE_ENV === "develop") tests.watch();
 

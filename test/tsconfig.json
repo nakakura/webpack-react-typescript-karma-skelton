@@ -15,15 +15,18 @@
         "sourceMap": true
     },
     "files": [
-        "stores/Hoge.tests.ts",
-        "../typings/browser/ambient/react/index.d.ts",
-        "../typings/browser/ambient/react-dom/index.d.ts",
-        "../typings/browser/ambient/react-addons-test-utils/index.d.ts",
-        "../typings/browser/ambient/flux/index.d.ts",
-        "../typings/browser/ambient/jasmine/index.d.ts",
-        "../typings/browser/ambient/node/index.d.ts"
+        "./main.tests.ts",
+        "../typings/main/ambient/react/index.d.ts",
+        "../typings/main/ambient/react-dom/index.d.ts",
+        "../typings/main/ambient/react-addons-test-utils/index.d.ts",
+        "../typings/main/ambient/flux/index.d.ts",
+        "../typings/main/ambient/jasmine/index.d.ts",
+        "../typings/main/ambient/node/index.d.ts"
     ],
-    "exclude": [],
+    "exclude": [
+        "typings/browser.d.ts",
+        "typings/browser"
+    ],
     "atom": {
         "rewriteTsconfig": true
     }
