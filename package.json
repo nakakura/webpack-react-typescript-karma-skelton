@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "dev": "NODE_ENV=develop webpack-dev-server --config webpack.config.js",
-    "build": "NODE_ENV=production webpack --config webpack.config.js -p"
+    "build": "NODE_ENV=production webpack --config webpack.config.js -p",
+    "npm": "NODE_ENV=production webpack --config webpack.npm.config.js -p",
+    "clean": "rm -rf dist/*"
   },
   "repository": {
     "type": "git",

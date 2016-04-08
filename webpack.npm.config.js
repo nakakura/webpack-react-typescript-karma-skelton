@@ -5,21 +5,21 @@ var webpack = require('webpack')
     , _output = {}
     , _port = 8080;
 
-var tests = require('./helper/tests');
+var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     cache: true,
-    noParse: [
-        /sinon/
-    ],
+    externals: [nodeExternals()],
     entry: {
         main: './src/main.ts'
     },
     devtool: 'source-map',
     output: {
-        path: path.resolve(__dirname, './dist/bower'),
-        publicPath: "dist/bower",
-        filename: '[name].js'
+        path: path.resolve(__dirname, './dist/npm'),
+        publicPath: "dist/npm",
+        filename: '[name].js',
+        library: "PeerIo",
+        libraryTarget: "commonjs"
     },
     module: {
         loaders: [
@@ -30,7 +30,7 @@ module.exports = {
             }, {
                 test: /\.(js|jsx)?$/,
                 exclude: /(node_modules)/,
-                loader: 'babel', // 'babel-loader' is also a legal name to reference
+                loader: 'babel',
                 query: {
                     presets: ['react', 'es2015']
                 }
@@ -42,20 +42,18 @@ module.exports = {
             { test: /\.woff2$/, loader: 'url-loader?mimetype=application/font-woff' },
             { test: /\.eot$/, loader: 'url-loader?mimetype=application/font-woff' },
             { test: /\.ttf$/, loader: 'url-loader?mimetype=application/font-woff' }
-        ]
+        ],
+        plugins: [
+            new webpack.ResolverPlugin(
+                new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+            ),
+            new webpack.ProvidePlugin({
+                Offline: "offline-js"
+            })
+        ],
     },
     resolve: {
-        // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
-    },
-    devServer: {
-        quiet: true,
-        https: true,
-        inline: true,
-        port: 8080,
-        contentBase: "./"
     }
 };
-
-if (process.env.NODE_ENV === "develop") tests.watch();
 
