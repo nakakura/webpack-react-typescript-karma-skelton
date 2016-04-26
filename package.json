@@ -52,6 +52,7 @@
     "typescript": "^1.8.0",
     "webpack": "^1.12.2",
     "webpack-fail-plugin": "^1.0.4",
+    "webpack-node-externals": "^1.1.0",
     "webpack-notifier": "^1.2.1"
   },
   "dependencies": {}

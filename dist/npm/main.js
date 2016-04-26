@@ -1,0 +1,2 @@
+exports.PeerIo=function(o){function n(r){if(t[r])return t[r].exports;var e=t[r]={exports:{},id:r,loaded:!1};return o[r].call(e.exports,e,e.exports,n),e.loaded=!0,e.exports}var t={};return n.m=o,n.c=t,n.p="dist/npm",n(0)}([function(o,n){"use strict";var t=function(){function o(){}return o.prototype.add=function(o,n){return o+n},o}();window.onload=function(){console.log("onl")},n.__esModule=!0,n["default"]=t}]);
+//# sourceMappingURL=main.js.map
