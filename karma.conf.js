@@ -65,7 +65,7 @@ module.exports = function(config) {
                 //{type: 'html', dir:'coverage/'},  // https://github.com/karma-runner/karma-coverage/issues/123
                 { type: 'text' },
                 { type: 'text-summary' }
-            ],
+            ]
         }
     });
 };

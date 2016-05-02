@@ -4,7 +4,10 @@ src/**/*.js
 src/**/*.js.map
 test/**/*.js
 test/**/*.js.map
+test_node/**/*.js
+test_node/**/*.js.map
 !test/import-babel-polyfill.js 
+tmp/
 typings
 
 # Logs

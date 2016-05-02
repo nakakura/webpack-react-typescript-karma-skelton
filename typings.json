@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "chai": "registry:npm/chai#3.5.0+20160402210230",
+    "es6-promise": "registry:npm/es6-promise#3.0.0+20160211003958",
     "sinon": "registry:npm/sinon#1.16.0+20160309002336"
   }
 }
